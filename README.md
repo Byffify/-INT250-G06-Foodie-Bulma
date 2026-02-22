@@ -11,9 +11,6 @@ We built UI components without writing custom CSS by using Bulma classes.
 This demo includes:
 
 - Responsive layout using **columns**
-- **Notification** components
 - **Card** components (main component)
-
-All components are built using Bulma classes.
 
 ---
