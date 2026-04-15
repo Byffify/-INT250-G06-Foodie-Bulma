@@ -1,98 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bulma test</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INT250 GA2: Bulma Component Demo</title>
+  <!-- Bulma 1.0.0 via CDN (Source 1) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css">
+  <style>
+    /* Custom Theme Token (Demo of modern CSS variables trend) */
+    :root {
+      --bulma-primary: #485fc7;
+    }
+
+    .hero {
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      height: 100%;
+    }
+
+    /* ให้ Card สูงเท่ากัน */
+
+    /* แก้ปัญหารูปยืด: ใช้ object-fit cover เพื่อรักษาอัตราส่วนภาพ */
+    .card-image .image img {
+      object-fit: cover;
+    }
+  </style>
 </head>
+
 <body>
-<nav class="section">
+  <!-- [COMPONENT: NAVBAR] - Trend: Semantic & Responsive Layout -->
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
     <div class="container">
-        <h1 class="title">Bulma Foodie</h1>
-        <p class="subtitle">Test Bulma</p>
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#">
+          <strong>INT250-GROUP</strong>
+        </a>
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item">Home</a>
+          <a class="navbar-item">Documentation</a>
+        </div>
+      </div>
     </div>
   </nav>
-<section class="section">
-    <div class="container">
-        <div class="columns">
-            <div class="column">
-                <div class="notification is-primary">Borworn 017</div>
-            </div>
-            <div class="column">
-                <div class="notification is-link">Rapeepong 032</div>
-            </div>
-            <div class="column">
-                <div class="notification is-info">Sorrawich 044</div>
-            </div>
-            <div class="column">
-                <div class="notification is-info">Korawit 059</div>
-            </div>
-        </div>
+
+  <!-- [HERO SECTION] - Project Overview -->
+  <section class="hero is-primary is-bold">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">Trend: Modular CSS Frameworks</h1>
+        <h2 class="subtitle">Focusing on "Bulma" - The JS-Free Solution</h2>
+      </div>
     </div>
-</section>
-<section class="section">
+  </section>
+
   <div class="container">
-    <div class="columns">
-    
-      <div class="column">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./assets/fiat.png" alt="Placeholder image">
-            </figure>
+    <div class="columns is-desktop">
+
+      <!-- [COMPONENT: CARDS] - Showing Grid & Modular Design -->
+      <div class="column is-8">
+        <h3 class="title is-4">1. Component: Team Cards</h3>
+        <div class="columns is-multiline">
+          <!-- Member 1: Borworn -->
+          <div class="column is-6">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="./assets/fiat.png" alt="Profile"
+                    onerror="this.src='https://via.placeholder.com/400x300?text=Borworn+017'">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-5">Borworn 017</p>
+                    <span class="tag is-link">Developer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-content">
-            <p class="title is-5">Borworn 017</p>
-            <p class="subtitle is-6">Student</p>
+          <!-- Member 2: Rapeepong -->
+          <div class="column is-6">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="./assets/Bank.png" alt="Profile"
+                    onerror="this.src='https://via.placeholder.com/400x300?text=Rapeepong+032'">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-5">Rapeepong 032</p>
+                    <span class="tag is-success">Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Member 3: Sorrawich -->
+          <div class="column is-6">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="./assets/aom.png" alt="Profile"
+                    onerror="this.src='https://via.placeholder.com/400x300?text=Sorrawich+044'">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-5">Sorrawich 044</p>
+                    <span class="tag is-info">QA Engineer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Member 4: Korawit -->
+          <div class="column is-6">
+            <div class="card">
+              <div class="card-image">
+                <figure class="image is-4by3">
+                  <img src="./assets/plume.png" alt="Profile"
+                    onerror="this.src='https://via.placeholder.com/400x300?text=Korawit+059'">
+                </figure>
+              </div>
+              <div class="card-content">
+                <div class="media">
+                  <div class="media-content">
+                    <p class="title is-5">Korawit 059</p>
+                    <span class="tag is-warning">UI Designer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="column">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./assets/Bank.png" alt="Placeholder image">
-            </figure>
+      <!-- [COMPONENT: FORM] - Showing Control & Field Groups -->
+      <div class="column is-4">
+        <div class="box">
+          <h3 class="title is-4">2. Component: Feedback Form</h3>
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Your Name">
+            </div>
           </div>
-          <div class="card-content">
-            <p class="title is-5">Rapeepong 032</p>
-            <p class="subtitle is-6">Student</p>
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" type="email" placeholder="email@example.com">
+            </div>
           </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./assets/aom.png" alt="Placeholder image">
-            </figure>
+          <div class="field">
+            <label class="label">Message</label>
+            <div class="control">
+              <textarea class="textarea" placeholder="How was the demo?"></textarea>
+            </div>
           </div>
-          <div class="card-content">
-            <p class="title is-5">Sorrawich 044</p>
-            <p class="subtitle is-6">Student</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="./assets/plume.png" alt="Placeholder image">
-            </figure>
-          </div>
-          <div class="card-content">
-            <p class="title is-5">Korawit 059</p>
-            <p class="subtitle is-6">Student</p>
+          <div class="field">
+            <div class="control">
+              <button class="button is-link is-fullwidth">Submit Demo Feedback</button>
+            </div>
           </div>
         </div>
       </div>
 
     </div>
   </div>
-</section>
+
+  <footer class="footer mt-6">
+    <div class="content has-text-centered">
+      <p>
+        <strong>Bulma Demo</strong> for INT250 Assignment. Built with <span class="has-text-danger">❤</span> and Pure
+        CSS.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Small Script for Navbar Burger (Required for Mobile Demo) -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+      $navbarBurgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const $target = document.getElementById(target);
+          el.classList.toggle('is-active');
+          $target.classList.toggle('is-active');
+        });
+      });
+    });
+  </script>
 </body>
+
 </html>
